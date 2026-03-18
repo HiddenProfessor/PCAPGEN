@@ -1,8 +1,9 @@
-# PCAP Generator - Cybersecurity Training Tool
+# PCAPGEN
 
-A Windows XP-styled web application for generating realistic PCAP files with various cyberattack simulations for cybersecurity training and AI model development.
+PCAPGEN is a small efficient web application for generating realistic PCAP files with various cyberattack simulations for cybersecurity training and AI model development.
+It is made to look like an old Windows XP program with the only reason being that it looks so beautifully ugly!
 
-## Features
+## What's inside
 
 - **Multiple Attack Types**:
   - DoS/DDoS (SYN Flood, UDP Flood, ICMP Flood, HTTP Flood, Botnet, DNS/NTP Amplification)
@@ -16,8 +17,9 @@ A Windows XP-styled web application for generating realistic PCAP files with var
 - **Scenario Builder** — Combine multiple attacks into a single timeline
 - **CTF Challenge Creator** — Embed flags in HTTP headers, DNS, ICMP, TCP, or multi-packet encoding
 - **Configurable Parameters** — IPs, ports, duration, intensity, legitimate background traffic
-- **Nostalgic Windows XP UI**
 
+**As of right now - the attacks work, but the other parts need som work. However these will be fixed at a later date.**
+  
 ## Quick Start (Development)
 
 ```bash
@@ -74,6 +76,18 @@ CMD ["npm", "start"]
 - `npm run dev:server` - Start only the backend
 - `npm run build` - Build for production
 
-## License
+## How I use it (and how you might)
 
-MIT
+- Open the UI in your browser, pick an attack or assemble a scenario, tweak source/target IPs and durations, then download the resulting PCAP.
+- Use `POST /api/generate-pcap` for single attacks, `POST /api/generate-scenario` for timelines, and `POST /api/generate-ctf` for CTF-style PCAPs.
+- The server also exposes `GET /api/attack-types` to discover available templates.
+
+## Contributing and ideas
+
+If you have templates, more realistic background traffic, or nicer scenario-editing UX, send a PR. Small, focused changes are easiest to review — adding a single new attack type or improving validation is a great start.
+
+Want this to support a classroom workflow? Open an issue and describe your ideal features — I try to keep the surface area small and practical.
+
+Thanks for trying PCAPGEN — I hope it saves you time.
+
+— Hidden Professor

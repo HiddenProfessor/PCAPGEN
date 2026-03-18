@@ -2,6 +2,7 @@
   "name": "pcapgen",
   "version": "1.0.0",
   "description": "PCAP Generator for Cybersecurity Training",
+  "license": "GPL-3.0-or-later",
   "private": true,
   "type": "module",
   "scripts": {

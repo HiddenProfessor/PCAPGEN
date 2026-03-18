@@ -1,0 +1,35 @@
+/* Windows XP PCAP Generator - Component Specific Styles */
+
+/* Attack list item selection state */
+.attack-item.selected {
+  font-weight: bold;
+  background: linear-gradient(180deg, #D1E8FF 0%, #8FC7FF 100%);
+  border: 2px solid #0054E3;
+}
+
+/* Responsive grid adjustments for smaller screens */
+@media (max-width: 768px) {
+  .xp-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .xp-content {
+    padding: 10px !important;
+  }
+  
+  .xp-fieldset {
+    padding: 10px !important;
+    margin: 10px 0 !important;
+  }
+}
+
+/* Ensure tabs with buttons display correctly */
+.xp-tabs {
+  justify-content: flex-start;
+}
+
+/* Override for primary button in tabs */
+.xp-tabs .xp-button.primary {
+  margin: 0;
+  flex-shrink: 0;
+}

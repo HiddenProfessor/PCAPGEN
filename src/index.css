@@ -1,0 +1,381 @@
+/* Windows XP Themed Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Tahoma', 'MS Sans Serif', sans-serif;
+  background: linear-gradient(180deg, #245EDC 0%, #3F8CF3 50%, #245EDC 100%);
+  min-height: 100vh;
+  overflow: hidden;
+  color: #000;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Windows XP Window Chrome */
+.xp-window {
+  background: #ECE9D8;
+  border: 3px solid;
+  border-color: #0054E3 #0054E3 #0054E3 #0054E3;
+  box-shadow: 
+    2px 2px 5px rgba(0, 0, 0, 0.3),
+    inset 1px 1px 0 rgba(255, 255, 255, 0.8);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.xp-titlebar {
+  background: linear-gradient(180deg, #0997FF 0%, #0053EE 100%);
+  padding: 3px 5px 3px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 30px;
+  user-select: none;
+  cursor: default;
+}
+
+.xp-titlebar-text {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.xp-titlebar-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.xp-titlebar-buttons {
+  display: flex;
+  gap: 2px;
+}
+
+.xp-button-chrome {
+  width: 21px;
+  height: 21px;
+  background: linear-gradient(180deg, #EFF5FB 0%, #C7D7ED 100%);
+  border: 1px solid;
+  border-color: #fff #0A246A #0A246A #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: bold;
+  color: #000;
+  user-select: none;
+}
+
+.xp-button-chrome:hover {
+  background: linear-gradient(180deg, #FFF5CC 0%, #FFB347 100%);
+}
+
+.xp-button-chrome:active {
+  background: linear-gradient(180deg, #C7D7ED 0%, #EFF5FB 100%);
+  border-color: #0A246A #fff #fff #0A246A;
+}
+
+.xp-button-chrome.close:hover {
+  background: linear-gradient(180deg, #FF5C5C 0%, #D93636 100%);
+  color: #fff;
+}
+
+/* Menu Bar */
+.xp-menubar {
+  background: linear-gradient(180deg, #FCFBF7 0%, #E8E5DD 100%);
+  border-bottom: 1px solid #919B9C;
+  display: flex;
+  padding: 2px 5px;
+  font-size: 11px;
+}
+
+.xp-menu-item {
+  padding: 4px 8px;
+  cursor: pointer;
+  color: #000;
+  border-radius: 2px;
+}
+
+.xp-menu-item:hover {
+  background: #3168D5;
+  color: #fff;
+}
+
+/* Toolbar */
+.xp-toolbar {
+  background: linear-gradient(180deg, #F1EFEA 0%, #DCD8CB 100%);
+  border-bottom: 1px solid #919B9C;
+  padding: 4px 6px;
+  display: flex;
+  gap: 3px;
+  align-items: center;
+}
+
+.xp-tool-button {
+  background: linear-gradient(180deg, #EFF5FB 0%, #C7D7ED 100%);
+  border: 1px solid;
+  border-color: #fff #6E8CB9 #6E8CB9 #fff;
+  padding: 4px 8px;
+  font-size: 11px;
+  font-family: 'Tahoma', sans-serif;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #000;
+  border-radius: 2px;
+}
+
+.xp-tool-button:hover {
+  background: linear-gradient(180deg, #FFF5E5 0%, #FFD580 100%);
+  border-color: #FFB347 #C67D00 #C67D00 #FFB347;
+}
+
+.xp-tool-button:active {
+  background: linear-gradient(180deg, #C7D7ED 0%, #EFF5FB 100%);
+  border-color: #6E8CB9 #fff #fff #6E8CB9;
+}
+
+.xp-tool-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.xp-separator {
+  width: 1px;
+  height: 20px;
+  background: linear-gradient(180deg, #919B9C 0%, #E8E5DD 100%);
+  margin: 0 3px;
+}
+
+/* Content Area */
+.xp-content {
+  flex: 1;
+  overflow: auto;
+  background: #fff;
+  padding: 15px;
+}
+
+/* Tabs */
+.xp-tabs {
+  display: flex;
+  background: #ECE9D8;
+  border-bottom: 2px solid #fff;
+  padding: 0 5px;
+}
+
+.xp-tab {
+  background: linear-gradient(180deg, #D4D0C8 0%, #BDB9AE 100%);
+  border: 1px solid;
+  border-color: #fff #808080 #808080 #fff;
+  border-bottom: none;
+  padding: 6px 16px 8px;
+  margin-right: 2px;
+  cursor: pointer;
+  font-size: 11px;
+  border-radius: 3px 3px 0 0;
+  position: relative;
+  top: 2px;
+}
+
+.xp-tab.active {
+  background: #fff;
+  border-color: #fff #808080 #fff #fff;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.xp-tab:hover:not(.active) {
+  background: linear-gradient(180deg, #E8E5DD 0%, #D4D0C8 100%);
+}
+
+/* Form Elements */
+.xp-fieldset {
+  border: 2px groove #E8E5DD;
+  padding: 15px;
+  margin: 15px 0;
+  background: #fff;
+}
+
+.xp-legend {
+  font-weight: bold;
+  color: #0054E3;
+  padding: 0 5px;
+  font-size: 12px;
+}
+
+.xp-form-group {
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.xp-label {
+  font-size: 11px;
+  font-weight: bold;
+  color: #000;
+}
+
+.xp-input,
+.xp-select,
+.xp-textarea {
+  border: 2px inset #E8E5DD;
+  padding: 4px 6px;
+  font-family: 'Tahoma', sans-serif;
+  font-size: 11px;
+  background: #fff;
+}
+
+.xp-input:focus,
+.xp-select:focus,
+.xp-textarea:focus {
+  outline: 1px dotted #000;
+  outline-offset: -3px;
+}
+
+.xp-checkbox {
+  width: 13px;
+  height: 13px;
+  border: 2px inset #E8E5DD;
+  cursor: pointer;
+}
+
+/* Buttons */
+.xp-button {
+  background: linear-gradient(180deg, #EFF5FB 0%, #C7D7ED 100%);
+  border: 1px solid;
+  border-color: #fff #0A246A #0A246A #fff;
+  padding: 6px 16px;
+  font-size: 11px;
+  font-family: 'Tahoma', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  color: #000;
+  border-radius: 3px;
+  min-width: 75px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.xp-button:hover {
+  background: linear-gradient(180deg, #FFF5E5 0%, #FFD580 100%);
+}
+
+.xp-button:active {
+  background: linear-gradient(180deg, #C7D7ED 0%, #EFF5FB 100%);
+  border-color: #0A246A #fff #fff #0A246A;
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.xp-button.primary {
+  border: 2px solid #003C74;
+  font-weight: bold;
+}
+
+/* Status Bar */
+.xp-statusbar {
+  background: linear-gradient(180deg, #ECE9D8 0%, #D4D0C8 100%);
+  border-top: 1px solid #fff;
+  padding: 3px 5px;
+  display: flex;
+  gap: 10px;
+  font-size: 11px;
+  height: 22px;
+  align-items: center;
+}
+
+.xp-status-panel {
+  border: 1px solid;
+  border-color: #808080 #fff #fff #808080;
+  padding: 2px 8px;
+  background: #D4D0C8;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background: #D4D0C8;
+  border: 1px solid #808080;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #EFF5FB 0%, #C7D7ED 100%);
+  border: 1px solid;
+  border-color: #fff #0A246A #0A246A #fff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(90deg, #FFF5E5 0%, #FFD580 100%);
+}
+
+::-webkit-scrollbar-button {
+  background: linear-gradient(90deg, #EFF5FB 0%, #C7D7ED 100%);
+  border: 1px solid;
+  border-color: #fff #0A246A #0A246A #fff;
+  height: 16px;
+  width: 16px;
+}
+
+/* Grid Layout */
+.xp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin: 15px 0;
+}
+
+/* Attack List */
+.attack-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.attack-item {
+  background: linear-gradient(180deg, #F1F1F1 0%, #E8E8E8 100%);
+  border: 1px solid #999;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 2px;
+}
+
+.attack-item:hover {
+  background: linear-gradient(180deg, #FFF5E5 0%, #FFE8B3 100%);
+  border-color: #FFB347;
+}
+
+/* Icon styles */
+.icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+}
+
+.icon-app {
+  background: linear-gradient(135deg, #0054E3 0%, #3F8CF3 100%);
+  border: 1px solid #002080;
+  border-radius: 2px;
+}
